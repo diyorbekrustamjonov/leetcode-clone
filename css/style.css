@@ -1,0 +1,171 @@
+/* Import roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+
+
+/* Getting bootstrap container  */
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+
+body{
+    color: rgb(33, 33, 33);
+    font-family: 'Roboto', sans-serif;
+}
+
+.app{
+    background-color: #fff;
+    min-height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.app-content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.app-content .left-side{
+    width: 50%;
+}
+
+.app-content .right-side{
+    width: 50%;
+}
+
+.app-content .left-side{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+
+.app-content .left-side .problems-header{
+    margin: 20px 0 20px 0;
+}
+
+
+.app-content .left-side .problems-header select{
+    width: 150px;
+    outline: none;
+    border-color: #ccc;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+
+
+
+
+.app-content .left-side .conditions{
+    margin-top: 30px;
+    
+}
+
+.app-content .left-side .conditions .condition-header{
+    
+    font-size: 18px;
+}
+
+.app-content .left-side .conditions .condition-description{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+
+.app-content .left-side .stdio {
+    margin-top: 30px;
+}
+
+
+.app-content .left-side .stdio ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.app-content .left-side .stdio ul li .stdio-header{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.app-content .left-side .stdio ul li{
+    margin-top: 25px;
+}
+
+.app-content .left-side .stdio ul li .stdio-content{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f7f9fa;
+}
+
+.app-content .left-side .stdio ul li .stdio-content .stdio-code span{
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .7px;
+}
+
+.right-side{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.right-side .right-side-content form{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.right-side .right-side-content form .btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.right-side .right-side-content form .btn button{
+    background: rgb(69, 90, 100);
+    border: none;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    outline: none;
+    border-radius: 3px;
+    
+}
+
+.right-side .right-side-content form textarea{
+    height: 400px;
+    resize: vertical;
+}
+

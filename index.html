@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <div class="app-content">
+            <div class="left-side">
+                <div class="side-content">
+
+                <div class="problems-header">
+                    <select name="problem" id="problem">
+                        <option value="0">
+                            
+                        </option>
+                    </select>
+                </div>
+                <div class="conditions">
+                    <h1 class="condition-header">
+                    </h1>
+                    <p class="condition-description">
+                    </p>
+                </div>
+                <div class="stdio">
+                    <ul>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="right-side-content">
+                    <form id="problemResult">
+                        <textarea name="textarea" class="javascript" id="textarea" cols="30" rows="10"></textarea>
+                        <div class="btn">
+                            <div></div>
+                            <button id="btn" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <style>
+                    .right-side-status ul{
+                        margin-top: 50px;
+                        display: flex;
+                        justify-content: space-around;
+                    }
+                </style>
+                <div class="right-side-status">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/problems.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
