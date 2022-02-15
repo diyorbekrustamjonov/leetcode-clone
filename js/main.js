@@ -65,43 +65,40 @@ function renderProblemsContent(problemId){
     button.onclick = (e) => {
         e.preventDefault();
         problemStatus.textContent = null
-        console.log(textarea.value)
-        // try{
+        try{
             let func = new Function(findProblem.functionArguments.join(","), `
                 ${textarea.value}
             return ${findProblem.functionName}(${findProblem.functionArguments.join(",")})
             `);
+        
+            for(let test of findProblem.tests){
+                let result = func(test.test[0], test.test[1], test.test[2], test.test[3])
+                if(result == undefined) return
 
-        console.log(func)
-        for(let test of findProblem.tests){
-            // console.log("asdasd")
-            let result = func(test.test[0], test.test[1], test.test[2], test.test[3])
-            if(result == undefined) return
-
-            //Check if result is equal to test.result
-            if(result.toString() == test.result.toString()){
-                let [li, span, i] = createElements("li", "span", "i")
-                li.textContent = `${test.testId}.`
-                span.classList.add("status")
-                span.textContent = "Pass"
-                i.classList.add("fas")
-                i.classList.add("fa-check")
-                li.append(span, i)
-                problemStatus.append(li)
-            }else{
-                let [li, span, i] = createElements("li", "span", "i")
-                li.textContent = `${test.testId}. `
-                span.classList.add("status")
-                span.textContent = "Fail"
-                i.classList.add("fas")
-                i.classList.add("fa-times")
-                li.append(span, i)
-                problemStatus.append(li)
+                //Check if result is equal to test.result
+                if(result.toString() == test.result.toString()){
+                    let [li, span, i] = createElements("li", "span", "i")
+                    li.textContent = `${test.testId}.`
+                    span.classList.add("status")
+                    span.textContent = "Pass"
+                    i.classList.add("fas")
+                    i.classList.add("fa-check")
+                    li.append(span, i)
+                    problemStatus.append(li)
+                }else{
+                    let [li, span, i] = createElements("li", "span", "i")
+                    li.textContent = `${test.testId}. `
+                    span.classList.add("status")
+                    span.textContent = "Fail"
+                    i.classList.add("fas")
+                    i.classList.add("fa-times")
+                    li.append(span, i)
+                    problemStatus.append(li)
+                }
             }
+        }catch(error){
+            alert(error.messgae);
         }
-        // }catch(error){
-            // alert(error.messgae);
-        // }
     }
 }
 
